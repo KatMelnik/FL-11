@@ -51,7 +51,7 @@
 	}
 	p {
 		font-style: normal;
-    }
+    	}
     .tm-banner-text {
         animation: none;
         font-weight: 300;
@@ -132,17 +132,17 @@
 		color: #76cdd7;
 	}
 	.tm-section-description {
-    	text-indent: 1.5em;
+    		text-indent: 1.5em;
 	}
 	.boxes {
 		width: 100%;
 	}
-    .box-bg:hover {
+    	.box-bg:hover {
 		background-color: lightskyblue;
 	}
 	.box-bg .tm-box-bg-title:hover{
-    color: #fff;
-}
+    		color: #fff;
+	}
 
 	.heading ol {
 		list-style-type: lower-roman;
@@ -229,6 +229,6 @@
 	    color: #ffffff;
 	}
 	h2+p:first-of-type{
-    	font-style: italic;
+    		font-style: italic;
 	}
 }
