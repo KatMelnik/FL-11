@@ -57,7 +57,7 @@ header {
         content: "";
         position: absolute;
         display: block;
-        width: 315px;
+        width: 295px;
         height: 24px;
         background-color: #ff4e33;
         left: 0;
@@ -104,8 +104,8 @@ header {
       display: block;
       background-color: #ff4e33;
       bottom: 59px;
-      left: 283px;
-      width: 227px;
+      left: 250px;
+      width: 215px;
       height: 14px;
       z-index: -1; }
   .section .section_card_wrap {
