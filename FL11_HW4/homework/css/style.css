@@ -193,7 +193,7 @@ h2{
     background-size: cover;
 }
 .news-image:nth-child(2){
-    background:url(../img/news-list-2.jpg);
+    background:url(img/news-list-2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -268,7 +268,7 @@ input[type="email"]{
     font-size: 10px;
     width: 115px;
     height: 28px;
-    border:1px solid №000000;
+    border:1px solid black;
     background-color: #F3F3F3;
 }
 input::-webkit-input-placeholder { 
