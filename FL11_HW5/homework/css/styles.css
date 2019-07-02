@@ -51,9 +51,13 @@ header{
 .logo span{
   color: #d12767;
 }
+nav {
+  height: 100%;
+}
 .menu-desctop{
   display: flex;
   height: 100%;
+  align-items: center;
 }
 .menu-desctop a{
   color:#fff;
@@ -61,9 +65,10 @@ header{
   padding-right: 25px;
   padding-left: 25px;
 }
-.menu-desctop a:hover {
+.menu-desctop li:hover {
   transition: .5s;
   background-color: #b8b8b8;
+  position: relative;
 }
 .menu-burger{
   display: none;
@@ -76,6 +81,11 @@ header{
 }
 ul{
   list-style: none;
+}
+li {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 main{
   display: flex;
