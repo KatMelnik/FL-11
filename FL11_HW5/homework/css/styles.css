@@ -171,6 +171,10 @@ main{
   background: rgba(209, 39, 103, 0.5);
   transition: .5s;
 }
+.post:nth-child(5) .content:hover::after{
+  background: rgba(45, 149, 187, 0.5);
+  transition: .5s;
+}
 .content h2{
   font-size: 56px;
   font-weight: 200;
