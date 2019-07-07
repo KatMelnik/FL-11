@@ -2,7 +2,6 @@ let a, b, c;
 a = +prompt('Please, enter side A of triangle (positive number):', '');
 b = +prompt('Please, enter side B of triangle (positive number):', '');
 c = +prompt('Please, enter side C of triangle (positive number):', '');
-
 if (isNaN(a) || isNaN(b) || isNaN(c) || a <= 0 || b <= 0 || c <= 0) {
 	console.log('Input Error. Enter only positive number');
 } else if (a < b + c && b < a + c && c < a + b) {

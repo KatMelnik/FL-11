@@ -8,7 +8,7 @@ c2 = +prompt('Enter coordinate Y for point C', '');
 let divHalf = 2;
 if (isNaN(a1) || isNaN(a2) || isNaN(b1) || isNaN(b2) || isNaN(c1) || isNaN(c2)) {
 	console.log('Input Error. Please, enter only number.'); 
-} else if ((a1 + b1)/divHalf===c1 && (a2 + b2)/divHalf===c2) {
+} else if ((a1 + b1)/divHalf === c1 && (a2 + b2)/divHalf === c2) {
 	console.log(true); 
 } else {
 	console.log(false); 
