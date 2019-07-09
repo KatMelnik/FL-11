@@ -1,4 +1,3 @@
-// Your code goes here
 let minLenghtEmail = 6;
 let minLenghtPass = 5;
 let email, password, newPassword,repeatNewPassword;
