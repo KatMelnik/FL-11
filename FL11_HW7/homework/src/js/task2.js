@@ -21,9 +21,10 @@ if(!confirm('Do you want to play a game?')) {
 	intNumber=Math.floor(Math.random()*(maxNumber+1));
 	console.log(intNumber);
 	for(let i=0;i<countTry;i++){
-		number=+prompt('Enter a number (from 0 to 8)\n'+
-			' of pocket on which the ball could land.\n'+
-			'You have '+leftTry+' attempts to guess a number.','');
+		number=+prompt('Choose a roulette pocket number from 0 to 8\n'+
+			' \nAttempts left:'+leftTry+
+			' \nTotal prize:'+prize+'$'+
+			'\nPossible prize on current attempt: 100$','');
 		leftTry=leftTry-1;
 		if (number===intNumber){
 			if (i === tryOne) {
