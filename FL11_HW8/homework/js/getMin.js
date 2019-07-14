@@ -3,7 +3,7 @@ function getMin(...theArgs) {
 	for (let i = 0; i < theArgs.length; i++) {
 		if (arguments[i] < minRezult) {
 			minRezult = arguments[i];
-        }
+        	}
 	}
 	return minRezult;
 }
