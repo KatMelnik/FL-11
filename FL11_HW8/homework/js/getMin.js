@@ -1,6 +1,6 @@
 function getMin(...theArgs) {
-	var minRezult = arguments[0];
-	for (var i = 0; i < theArgs.length; i++) {
+	let minRezult = arguments[0];
+	for (let i = 0; i < theArgs.length; i++) {
 		if (arguments[i] < minRezult) {
 			minRezult = arguments[i];
         }
