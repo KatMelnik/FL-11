@@ -1,4 +1,4 @@
-let rootNode = document.getElementById('root').addEventListener('click', checkItem);
+let rootNode = document.getElementById('root').addEventListener('click', checkEl);
 let addBtn = document.querySelector('.btn-add').addEventListener('click', addEl);
 let inputTask = document.getElementById('new-task');
 let taskList = document.getElementById('list-task');
@@ -71,7 +71,7 @@ function deleteEl() {
 	let ul = list.parentNode;
 	ul.removeChild(list);
 }
-function checkItem() {
+function checkEl() {
 	let list = taskList.childNodes;
 	const maxNumOfListItems = 10;
 	if (list.length === maxNumOfListItems) {
