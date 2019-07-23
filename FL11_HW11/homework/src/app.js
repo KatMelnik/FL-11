@@ -4,77 +4,77 @@ let inputTask = document.getElementById('new-task');
 let taskList = document.getElementById('list-task');
 let message = document.querySelector('.mess');
 function createNewEl(task) {
-	let listItem = document.createElement('li');
-	listItem.className = 'list-item';
-	listItem.setAttribute('draggable', 'true');
 	let checkbox = document.createElement('button');
+	let list = document.createElement('li');
+	let input = document.createElement('input');
+	let editBtn = document.createElement('button');
+	let deleteBtn = document.createElement('button');
+	let label = document.createElement('label');
+	list.className = 'list-item';
+	list.setAttribute('draggable', 'true');
 	checkbox.className = 'btn checkbox';
 	checkbox.innerHTML = '<i class="material-icons">check_box_outline_blank</i>';
-	let label = document.createElement('label');
 	label.innerHTML = task;
-	let input = document.createElement('input');
 	input.type = 'text';
-	let editButton = document.createElement('button');
-	editButton.className = 'btn edit';
-	editButton.innerHTML = '<i class="material-icons">edit</i>';
-	let deleteButton = document.createElement('button');
-	deleteButton.className = 'btn delete';
-	deleteButton.innerHTML = '<i class="material-icons">delete</i>';
-	listItem.appendChild(checkbox);
-	listItem.appendChild(label);
-	listItem.appendChild(input);
-	listItem.appendChild(editButton);
-	listItem.appendChild(deleteButton);
-	listItem.addEventListener('dragstart', dragStart);
-	listItem.addEventListener('dragover', dragOver);
-	listItem.addEventListener('drop', dragDrop);
-	listItem.addEventListener('dragend', dragEnd);
-	return listItem;
+	editBtn.className = 'btn edit';
+	editBtn.innerHTML = '<i class="material-icons">edit</i>';
+	deleteBtn.className = 'btn delete';
+	deleteBtn.innerHTML = '<i class="material-icons">delete</i>';
+	list.appendChild(checkbox);
+	list.appendChild(label);
+	list.appendChild(input);
+	list.appendChild(editBtn);
+	list.appendChild(deleteBtn);
+	list.addEventListener('dragstart', dragStart);
+	list.addEventListener('dragover', dragOver);
+	list.addEventListener('drop', dragDrop);
+	list.addEventListener('dragend', dragEnd);
+	return list;
 }
 function addEl() {
 	if(inputTask.value) {
-		let listItem = createNewEl(inputTask.value);
-		taskList.appendChild(listItem);
-		bindTaskEvents(listItem);
+		let list = createNewEl(inputTask.value);
+		taskList.appendChild(list);
+		bindTaskEvents(list);
 		inputTask.value = '';
 	}
 }
 function editEl() {
-	let listItem = this.parentNode;
-	let editButton = this;
-	let label = listItem.querySelector('label');
-	let input = listItem.querySelector('input[type="text"]');
-	let containsClass = listItem.classList.contains('edit-mode');
+	let list = this.parentNode;
+	let editBtn = this;
+	let label = list.querySelector('label');
+	let input = list.querySelector('input[type="text"]');
+	let containsClass = list.classList.contains('edit-mode');
 	if (containsClass) {
 	label.innerHTML = input.value;
-	editButton.className = 'btn edit';
-	editButton.innerHTML = '<i class="material-icons">edit</i>';
+	editBtn.className = 'btn edit';
+	editBtn.innerHTML = '<i class="material-icons">edit</i>';
 	} else {
 		input.value = label.innerText;
-		editButton.className = 'btn save';
-		editButton.innerHTML = '<i class="material-icons">save</i>';
+		editBtn.className = 'btn save';
+		editBtn.innerHTML = '<i class="material-icons">save</i>';
 	}
-	listItem.classList.toggle('edit-mode');
+	list.classList.toggle('edit-mode');
 }
 function endEl() {
-	let listItem = this.parentNode;
-	let checkbox = listItem.querySelector('button.checkbox');
-	let label = listItem.querySelector('label');
-	let editButton = listItem.querySelector('button.edit');
+	let list = this.parentNode;
+	let checkbox = list.querySelector('button.checkbox');
+	let editButton = list.querySelector('button.edit');
+	let label = list.querySelector('label');
 	checkbox.className = 'btn checkbox';
 	checkbox.innerHTML = '<i class="material-icons">check_box</i>';
 	label.className = 'strikethrough'; 
 	editButton.disabled = true;
 } 
 function deleteEl() {
-	let listItem = this.parentNode;
-	let ul = listItem.parentNode;
-	ul.removeChild(listItem);
+	let list = this.parentNode;
+	let ul = list.parentNode;
+	ul.removeChild(list);
 }
 function checkItem() {
-	let listItems = taskList.childNodes;
+	let list = taskList.childNodes;
 	const maxNumOfListItems = 10;
-	if (listItems.length === maxNumOfListItems) {
+	if (list.length === maxNumOfListItems) {
 		inputTask.disabled = true;
 		message.innerHTML = 'The list is full';
 	} else {
@@ -82,13 +82,13 @@ function checkItem() {
 		message.innerHTML = '';
 	}
 }
-function bindTaskEvents(listItem) {
-	let checkbox = listItem.querySelector('button.checkbox');
-	let editButton = listItem.querySelector('button.edit');
-	let deleteButton = listItem.querySelector('button.delete');
+function bindTaskEvents(list) {
+	let checkbox = list.querySelector('button.checkbox');
+	let editBtn = list.querySelector('button.edit');
+	let deleteBtn = list.querySelector('button.delete');
 	checkbox.onclick = endEl;
-	editButton.onclick = editEl;
-	deleteButton.onclick = deleteEl;
+	editBtn.onclick = editEl;
+	deleteBtn.onclick = deleteEl;
 }
 let dragSrcEl = null;
 function dragStart(e) {
