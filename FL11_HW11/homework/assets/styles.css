@@ -1,0 +1,91 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	color: #000000;
+}
+.wrap {
+	max-width: 1200px;
+	min-height: 100vh;
+	margin: 0 auto;
+	padding: 15px 50px;
+	background-color: #fff;
+}
+.title {
+	margin-bottom: 15px;
+	font-size: 30px;
+	color: #00b5ff;
+	text-align: center;
+}
+.btn {
+	display: flex;
+	flex-direction: row;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+.btn i {
+	font-size: 35px;
+	color: #00b5ff;
+	transition: all .4s; 
+}
+.btn:hover i {
+	color: #0091CC;
+}
+.btn-add i {
+	font-size: 65px;
+}
+.delete {
+	margin-left: auto;
+}
+#list-task {
+	margin-top: 20px;
+}
+.add-task, 
+.list-item {
+	display: flex;
+	align-items: center;
+	margin: 5px 0;
+}
+input {
+	width: 30%;
+	padding: 5px;
+	margin-right: 10px;
+	border: none;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	outline: none;
+}
+.add-task input {
+	width: 100%;
+	padding: 12px;
+}
+.list-item input {
+	display: none;
+}
+.list-item label {
+	padding: 0 10px;
+}
+li.edit-mode input {
+	display: block;
+}
+li.edit-mode label, 
+li.edit-mode .checkbox {
+	display: none;
+}
+.mess {
+	margin-top: -5px;
+	text-align: center;
+	font-size: 26px;
+	color: orangered;
+}
+.strikethrough {
+	color: #ccc;
+	text-decoration: line-through;
+	font-style: italic;
+}
